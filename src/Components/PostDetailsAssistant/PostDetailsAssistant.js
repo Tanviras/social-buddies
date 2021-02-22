@@ -89,7 +89,7 @@ const PostDetailsAssistant = (props) => {
             <MoreVertIcon />
           </IconButton>
         }
-        title={props.filteredPost.title}
+        title= {props.filteredPost.title}
         subheader="September 14, 2016"
       />
       <CardContent>

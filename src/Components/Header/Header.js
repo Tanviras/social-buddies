@@ -6,8 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
-// import MenuIcon from '@material-ui/icons/Menu';
-// import SearchIcon from '@material-ui/icons/Search';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -97,7 +97,7 @@ const Header = () => {
             color="inherit"
             aria-label="open drawer"
           >
-            {/* <MenuIcon /> */}
+            <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
                 <a className='navAlign' href="/home">Home</a>
@@ -105,7 +105,7 @@ const Header = () => {
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
-              {/* <SearchIcon /> */}
+              <SearchIcon />
             </div>
             <InputBase
               placeholder="Search…"

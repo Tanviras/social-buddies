@@ -1,9 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import Home from './Home/Home';
-import Header from './Header/Header';
-import NotFound from './NotFound/NotFound';
-import PostDetails from './PostDetails/PostDetails';
+import Home from './Components/Home/Home';
+import Header from './Components/Header/Header';
+import NotFound from './Components/NotFound/NotFound';
+import PostDetails from './Components/PostDetails/PostDetails';
 
 import {
   BrowserRouter as Router,
