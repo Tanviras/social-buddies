@@ -1,23 +1,77 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import Home from './Home/Home';
+import Header from './Header/Header';
+import NotFound from './NotFound/NotFound';
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import PostDetails from './PostDetails/PostDetails';
+import Comments from './Comments/Comments';
+
+
+
 
 function App() {
+  const [posts,setPosts]=useState([]);
+
+  useEffect(()=>{
+    const url="https://jsonplaceholder.typicode.com/posts";
+    fetch(url)
+    .then(res=>res.json())
+    .then(data=>{
+                setPosts(data);
+                })
+                })
+
+                // console.log(posts);
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header></Header>
+
+      <Router>
+        <Switch>
+
+        <Route path="/home">
+        <Home posts={posts}></Home>
+        </Route>
+
+        {/* <Route path="/post">
+        <Post posts={posts} comments={comments}></Post>
+        </Route> */}
+
+
+        <Route path="/post/:id">
+        <PostDetails posts={posts}></PostDetails>
+        </Route>
+
+        {/* <Route path="/post/:id">
+        <Comments comments={comments}></Comments>
+        </Route> */}
+
+
+        <Route path="/">
+        <Home></Home>
+        </Route>
+
+        <Route path="*">
+        <NotFound></NotFound>
+        </Route>
+
+          
+
+        </Switch>
+      </Router>
+      
     </div>
   );
 }
