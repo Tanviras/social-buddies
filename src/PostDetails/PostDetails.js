@@ -24,10 +24,9 @@ const PostDetails = (props) => {
 
 
     return (
-        <div>
-            <h1>Post of id-{id}</h1>
+        <div className = "App">
            {
-          <PostDetailsAssistant filteredPost={filteredPost} id={id}></PostDetailsAssistant>
+           <PostDetailsAssistant filteredPost={filteredPost} id={id}></PostDetailsAssistant>
            }
         </div>
     );

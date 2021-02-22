@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Home from './Home/Home';
 import Header from './Header/Header';
 import NotFound from './NotFound/NotFound';
-import Image from './Image/Image';
 import PostDetails from './PostDetails/PostDetails';
 
 import {
@@ -38,7 +37,6 @@ function App() {
 
   return (
     <div>
-      <Image></Image>
       <Header></Header>
 
       <Router>

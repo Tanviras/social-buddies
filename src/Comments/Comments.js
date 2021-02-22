@@ -15,10 +15,16 @@ const Comments = (props) => {
                           })
                           })
 
+
+
+
+  
    
+
+
+
     return (
         <div>
-            <h1>This is comment of post:{props.id}</h1>
             {
             comments.map(comment=><CommentsAssistant comment={comment}></CommentsAssistant>)
             }
