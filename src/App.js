@@ -3,16 +3,18 @@ import React, { useState, useEffect } from 'react';
 import Home from './Home/Home';
 import Header from './Header/Header';
 import NotFound from './NotFound/NotFound';
-
+import Image from './Image/Image';
+import PostDetails from './PostDetails/PostDetails';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  // Link
 } from "react-router-dom";
-import PostDetails from './PostDetails/PostDetails';
-import Comments from './Comments/Comments';
+
+
+
 
 
 
@@ -36,6 +38,7 @@ function App() {
 
   return (
     <div>
+      <Image></Image>
       <Header></Header>
 
       <Router>
@@ -53,10 +56,6 @@ function App() {
         <Route path="/post/:id">
         <PostDetails posts={posts}></PostDetails>
         </Route>
-
-        {/* <Route path="/post/:id">
-        <Comments comments={comments}></Comments>
-        </Route> */}
 
 
         <Route path="/">
